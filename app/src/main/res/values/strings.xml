@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PaperSystem2</string>
+    <string name="incognito_login_mode">匿名登陆</string>
+    <string name="user_login_mode">登录</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="register">立刻注册</string>
+    <string name="Search">搜索</string>
+    <string name="upload_file">上传文件</string>
+
+    <string-array name="college_name">
+        <item>计算机科学学院</item>
+        <item>体育学院</item>
+        <item>化学与环境工程学院</item>
+        <item>医学院</item>
+        <item>外语学院</item>
+        <item>政治与公共事务管理学院</item>
+        <item>教育学院</item>
+        <item>数学与信息科学学院</item>
+        <item>文学院</item>
+        <item>旅游与地理学院</item>
+        <item>经济管理学院</item>
+        <item>美术学院</item>
+        <item>英东生命科学学院</item>
+        <item>音乐学院</item>
+        <item>韶州师范学院</item>
+        <item>英东食品农业科学与工程学院</item>
+        <item>英东农业科学与工程学院</item>
+    </string-array>
+
+    <string-array name="computer_class_name">
+        <item>软件工程</item>
+        <item>软件服务外包</item>
+        <item>物联网</item>
+        <item>信息管理</item>
+        <item>国际</item>
+    </string-array>
+
+</resources>

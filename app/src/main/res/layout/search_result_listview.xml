@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_width="wrap_content"
+        android:src="@drawable/word"
+        android:id="@+id/img_list"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/img_list"
+        android:layout_toEndOf="@+id/img_list"
+        android:id="@+id/linearLayout">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:text="文  件  名："/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文件名"
+                    android:id="@+id/result_paper_filename"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="学        院："/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学院"
+                    android:id="@+id/result_paper_college"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="学        科："/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学科"
+                    android:id="@+id/result_paper_name"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="出题老师："/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出题老师"
+                    android:id="@+id/result_paper_teacher"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="出题时间："/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出题时间"
+                    android:id="@+id/result_paper_year"/>
+            </TableRow>
+            <TableRow android:visibility="invisible">
+                <TextView android:id="@+id/file_id"
+                    android:visibility="invisible"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载"
+            android:id="@+id/btn_download"
+             />
+    </LinearLayout>
+
+
+</RelativeLayout>

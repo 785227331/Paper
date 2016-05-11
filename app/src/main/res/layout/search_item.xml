@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView android:text="学院"/>
+            <Spinner android:id="@+id/search_paper_college">
+            </Spinner>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="学科"/>
+            <Spinner android:id="@+id/search_paper_name"
+                
+                >
+            </Spinner>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="出题老师"/>
+            <Spinner android:id="@+id/search_paper_teacher">
+            </Spinner>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="班级"/>
+            <Spinner android:id="@+id/search_paper_class">
+            </Spinner>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

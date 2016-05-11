@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/login_bg"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+    </LinearLayout>
+    <LinearLayout style="@style/Register_Input">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/base_color_text_black"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:text="学号："/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Register_Edit"
+            android:hint="请输入学号......"
+            android:singleLine="true"
+            android:id="@+id/register_username"/>
+    </LinearLayout>
+    <LinearLayout style="@style/Register_Input">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/base_color_text_black"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:text="密码："/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Register_Edit"
+            android:password="true"
+            android:singleLine="true"
+            android:hint="请输入至少8位的密码"
+            android:id="@+id/register_userpassword"/>
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow style="@style/Register_Input">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="学      院:"/>
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:id="@+id/college"
+                />
+
+        </TableRow>
+        <TableRow style="@style/Register_Input">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="班      级:"/>
+            <Spinner
+                android:id="@+id/userclass"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"/>
+
+        </TableRow>
+        <TableRow style="@style/Register_Input">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="入学年份:"
+                />
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:id="@+id/usergrade" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dodgerblue"
+        android:onClick="doClick"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:textColor="@color/base_color_text_white"
+        android:text="完成"
+        android:id="@+id/btn_finish" />
+</LinearLayout>

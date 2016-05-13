@@ -279,12 +279,12 @@ public class Personal extends Fragment {
     protected Dialog onCreateDialog(int id) {
         Map<String, Integer> images = new HashMap<String, Integer>();
         // 下面几句设置各文件类型的图标， 需要你先把图标添加到资源文件夹
-        images.put(OpenFileDialog.sRoot, R.mipmap.ic_launcher);   // 根目录图标
-        images.put(OpenFileDialog.sParent, R.mipmap.ic_launcher);    //返回上一层的图标
-        images.put(OpenFileDialog.sFolder, R.mipmap.ic_launcher);   //文件夹图标
-        images.put("doc", R.mipmap.ic_launcher);   //doc文件图标
-        images.put("docx", R.mipmap.ic_launcher);   //docx文件图标
-        images.put(OpenFileDialog.sEmpty, R.mipmap.ic_launcher);
+        images.put(OpenFileDialog.sRoot, R.drawable.ic_action_folder_open);   // 根目录图标
+        images.put(OpenFileDialog.sParent, R.drawable.ic_action_folder_open);    //返回上一层的图标
+        images.put(OpenFileDialog.sFolder, R.drawable.ic_action_folder_open);   //文件夹图标
+        images.put("doc", R.drawable.ic_action_document);   //doc文件图标
+        images.put("docx",R.drawable.ic_action_document);   //docx文件图标
+        images.put(OpenFileDialog.sEmpty, R.drawable.ic_action_upload);
         dialog = OpenFileDialog.createDialog(id, getActivity(), "打开文件", new CallbackBundle() {
             //回调时间
             @Override

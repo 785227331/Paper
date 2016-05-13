@@ -15,25 +15,37 @@
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="设置中心"
-            android:textColor="@drawable/tab_textcolor"
+            android:textColor="@color/white"
             android:textSize="24sp"
             />
     </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/upload_file"
         android:id="@+id/btn_upload"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
         android:text="修改个人资料"
         android:id="@+id/btn_change_personal"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
         android:text="退出登录"
         android:textSize="20dp"
         android:background="@color/red"

@@ -29,7 +29,6 @@ public class Home_activity extends AppCompatActivity{
     private Button home;
     private Button download;
     private Button set;
-    private Drawable dra_set;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,28 +42,37 @@ public class Home_activity extends AppCompatActivity{
         home = (Button) findViewById(R.id.btn_home);
         download = (Button) findViewById(R.id.btn_down);
         set = (Button) findViewById(R.id.btn_set);
-        dra_set = getResources().getDrawable(R.drawable.icon_set_normal);
+
+        Drawable dra_home = getResources().getDrawable(R.drawable.ic_home_press);
+        dra_home.setBounds(0, 0, 40, 40);
+        home.setCompoundDrawables(null, dra_home, null, null);
+
+        Drawable dra_download = getResources().getDrawable(R.drawable.ic_download_normal);
+        dra_download.setBounds(0, 0, 40, 40);
+        download.setCompoundDrawables(null, dra_download, null, null);
+
+        Drawable dra_set = getResources().getDrawable(R.drawable.ic_set_normal);
         dra_set.setBounds(0, 0, 40, 40);
-        download.setCompoundDrawables(null, dra_set, null, null);
         set.setCompoundDrawables(null, dra_set, null, null);
 
-        //默认选中第一项，即HOME
-        Drawable dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-        dra_select.setBounds(0, 0, 40, 40);
-        home.setCompoundDrawables(null, dra_select, null, null);
+
 
         //设置点击事件
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dra_set.setBounds(0, 0, 40, 40);
-                //先设置其它为正常状态的图标
-                download.setCompoundDrawables(null, dra_set, null, null);
-                set.setCompoundDrawables(null, dra_set, null, null);
+                Drawable dra_home2 = getResources().getDrawable(R.drawable.ic_home_press);
+                dra_home2.setBounds(0, 0, 40, 40);
+                home.setCompoundDrawables(null, dra_home2, null, null);
 
-                Drawable dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                dra_select.setBounds(0, 0, 40, 40);
-                home.setCompoundDrawables(null, dra_select, null, null);
+                Drawable dra_download2 = getResources().getDrawable(R.drawable.ic_download_normal);
+                dra_download2.setBounds(0, 0, 40, 40);
+                download.setCompoundDrawables(null, dra_download2, null, null);
+
+                Drawable dra_set2 = getResources().getDrawable(R.drawable.ic_set_normal);
+                dra_set2.setBounds(0, 0, 40, 40);
+                set.setCompoundDrawables(null, dra_set2, null, null);
+
                 Home_activity.setposition(0);
                 Log.i("abc","ssssss");
             }
@@ -72,14 +80,18 @@ public class Home_activity extends AppCompatActivity{
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //先设置其它为正常状态的图标
-                dra_set.setBounds(0, 0, 40, 40);
-                home.setCompoundDrawables(null, dra_set, null, null);
-                set.setCompoundDrawables(null, dra_set, null, null);
+                Drawable dra_home2 = getResources().getDrawable(R.drawable.ic_home_normal);
+                dra_home2.setBounds(0, 0, 40, 40);
+                home.setCompoundDrawables(null, dra_home2, null, null);
 
-                Drawable dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                dra_select.setBounds(0, 0, 40, 40);
-                download.setCompoundDrawables(null, dra_select, null, null);
+                Drawable dra_download2 = getResources().getDrawable(R.drawable.ic_download_press);
+                dra_download2.setBounds(0, 0, 40, 40);
+                download.setCompoundDrawables(null, dra_download2, null, null);
+
+                Drawable dra_set2 = getResources().getDrawable(R.drawable.ic_set_normal);
+                dra_set2.setBounds(0, 0, 40, 40);
+                set.setCompoundDrawables(null, dra_set2, null, null);
+
                 Home_activity.setposition(1);
                 Log.i("abc","ssssss");
             }
@@ -87,14 +99,18 @@ public class Home_activity extends AppCompatActivity{
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //先设置其它为正常状态的图标
-                dra_set.setBounds(0, 0, 40, 40);
-                home.setCompoundDrawables(null, dra_set, null, null);
-                download.setCompoundDrawables(null, dra_set, null, null);
+                Drawable dra_home2 = getResources().getDrawable(R.drawable.ic_home_normal);
+                dra_home2.setBounds(0, 0, 40, 40);
+                home.setCompoundDrawables(null, dra_home2, null, null);
 
-                Drawable dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                dra_select.setBounds(0, 0, 40, 40);
-                set.setCompoundDrawables(null, dra_select, null, null);
+                Drawable dra_download2 = getResources().getDrawable(R.drawable.ic_download_normal);
+                dra_download2.setBounds(0, 0, 40, 40);
+                download.setCompoundDrawables(null, dra_download2, null, null);
+
+                Drawable dra_set2 = getResources().getDrawable(R.drawable.ic_set_press);
+                dra_set2.setBounds(0, 0, 40, 40);
+                set.setCompoundDrawables(null, dra_set2, null, null);
+
                 Home_activity.setposition(2);
                 Log.i("abc","ssssss");
             }
@@ -127,29 +143,35 @@ public class Home_activity extends AppCompatActivity{
             }
             @Override
             public void onPageSelected(int position) {
-                //先全部设置为正常状态的图标
-                dra_set = getResources().getDrawable(R.drawable.icon_set_normal);
+                Drawable dra_home = getResources().getDrawable(R.drawable.ic_home_normal);
+                dra_home.setBounds(0, 0, 40, 40);
+                home.setCompoundDrawables(null, dra_home, null, null);
+
+                Drawable dra_download = getResources().getDrawable(R.drawable.ic_download_normal);
+                dra_download.setBounds(0, 0, 40, 40);
+                download.setCompoundDrawables(null, dra_download, null, null);
+
+                Drawable dra_set = getResources().getDrawable(R.drawable.ic_set_normal);
                 dra_set.setBounds(0, 0, 40, 40);
-                home.setCompoundDrawables(null, dra_set, null, null);
-                download.setCompoundDrawables(null, dra_set, null, null);
                 set.setCompoundDrawables(null, dra_set, null, null);
+
                 //将选中的设置为选择状态
                 Drawable dra_select;
                 switch (position){
                     case 0:
-                        dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                        dra_select.setBounds(0, 0, 40, 40);
-                        home.setCompoundDrawables(null, dra_select, null, null);
+                        Drawable dra_home2 = getResources().getDrawable(R.drawable.ic_home_press);
+                        dra_home2.setBounds(0, 0, 40, 40);
+                        home.setCompoundDrawables(null, dra_home2, null, null);
                         break;
                     case 1:
-                        dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                        dra_select.setBounds(0, 0, 40, 40);
-                        download.setCompoundDrawables(null, dra_select, null, null);
+                        Drawable dra_download2 = getResources().getDrawable(R.drawable.ic_download_press);
+                        dra_download2.setBounds(0, 0, 40, 40);
+                        download.setCompoundDrawables(null, dra_download2, null, null);
                         break;
                     case 2:
-                        dra_select = getResources().getDrawable(R.drawable.icon_set_press);
-                        dra_select.setBounds(0, 0, 40, 40);
-                        set.setCompoundDrawables(null, dra_select, null, null);
+                        Drawable dra_set2 = getResources().getDrawable(R.drawable.ic_set_press);
+                        dra_set2.setBounds(0, 0, 40, 40);
+                        set.setCompoundDrawables(null, dra_set2, null, null);
                         break;
                 }
             }
